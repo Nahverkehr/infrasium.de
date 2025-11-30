@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wunschliste bearbeiten</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="authGate" class="auth-gate hidden">
+    <div class="auth-box card">
+      <h2>Passwort erforderlich</h2>
+      <input id="authInput" type="password" placeholder="Passwort" />
+      <button id="authBtn" class="btn primary">Freischalten</button>
+      <p id="authError" class="error hidden">Falsches Passwort!</p>
+    </div>
+  </div>
+
+  <div id="protected" class="hidden">
+    <header class="nav">
+      <div class="brand">Wunschliste</div>
+      <nav class="links">
+        <a href="index.html">Übersicht</a>
+        <a href="projects.html" class="active">Wunschliste</a>
+        <a href="settings.html">Einstellungen</a>
+      </nav>
+    </header>
+
+    <main class="wrapper">
+      <section class="page-head">
+        <h1>Wunschliste</h1>
+        <button id="newWishBtn" class="btn">Neuer Wunsch</button>
+      </section>
+
+      <section class="filters card">
+        <label>Suche <input id="searchWish" /></label>
+        <label>Priorität
+          <select id="filterPrio">
+            <option value="">Alle</option>
+            <option value="5">5 – Sehr hoch</option>
+            <option value="4">4 – Hoch</option>
+            <option value="3">3 – Mittel</option>
+            <option value="2">2 – Niedrig</option>
+            <option value="1">1 – Sehr niedrig</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="grid" id="wishGrid"></section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-card card">
+        <header class="card-header">
+          <h3 id="modalTitle">Neuer Wunsch</h3>
+          <button id="closeModal" class="btn">X</button>
+        </header>
+        <form id="wishForm" class="form">
+          <label>Name <input id="wishName" required /></label>
+          <label>Beschreibung <textarea id="wishDesc"></textarea></label>
+          <label>Priorität
+            <select id="wishPrio">
+              <option value="5">5 – Sehr hoch</option>
+              <option value="4">4 – Hoch</option>
+              <option value="3">3 – Mittel</option>
+              <option value="2">2 – Niedrig</option>
+              <option value="1">1 – Sehr niedrig</option>
+            </select>
+          </label>
+          <label>Status
+            <select id="wishStatus">
+              <option>Geplant</option>
+              <option>In Arbeit</option>
+              <option>Abgeschlossen</option>
+            </select>
+          </label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Speichern</button>
+            <button id="cancelModal" class="btn" type="button">Abbrechen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

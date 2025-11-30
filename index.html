@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wunschliste – Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="brand">Wunschliste</div>
+    <nav class="links">
+      <a href="index.html" class="active">Übersicht</a>
+      <a href="projects.html">Wunschliste</a>
+      <a href="settings.html">Einstellungen</a>
+    </nav>
+  </header>
+
+  <main class="wrapper">
+    <section class="hero">
+      <h1>Öffentliche Übersicht</h1>
+      <p>Hier siehst du die neuesten Wünsche und deren Prioritäten.</p>
+    </section>
+
+    <section class="stats-grid grid">
+      <div class="card stat"><h2 id="count-total">0</h2><p>Einträge</p></div>
+      <div class="card stat"><h2 id="count-high">0</h2><p>Hohe Priorität</p></div>
+      <div class="card stat"><h2 id="count-medium">0</h2><p>Mittlere Priorität</p></div>
+      <div class="card stat"><h2 id="count-done">0</h2><p>Erledigt</p></div>
+    </section>
+
+    <section class="latest card">
+      <header class="card-header">
+        <h3>Zuletzt hinzugefügt</h3>
+        <a class="btn small" href="projects.html">Zur Wunschliste</a>
+      </header>
+      <ul id="latest-list" class="list-reset"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Wunschliste</footer>
+  <script src="app.js"></script>
+</body>
+</html>

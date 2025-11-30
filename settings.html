@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Einstellungen</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="authGate" class="auth-gate hidden">
+    <div class="auth-box card">
+      <h2>Passwort erforderlich</h2>
+      <input id="authInput" type="password" placeholder="Passwort" />
+      <button id="authBtn" class="btn primary">Freischalten</button>
+      <p id="authError" class="error hidden">Falsches Passwort!</p>
+    </div>
+  </div>
+
+  <div id="protected" class="hidden">
+    <header class="nav">
+      <div class="brand">Wunschliste</div>
+      <nav class="links">
+        <a href="index.html">Übersicht</a>
+        <a href="projects.html">Wunschliste</a>
+        <a href="settings.html" class="active">Einstellungen</a>
+      </nav>
+    </header>
+
+    <main class="wrapper">
+      <h1>Einstellungen</h1>
+      <section class="card">
+        <h3>Darstellung</h3>
+        <label class="switch-row">
+          <input id="themeToggle" type="checkbox" />
+          <span class="theme-switch"></span>
+        </label>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
